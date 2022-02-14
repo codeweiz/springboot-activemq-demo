@@ -1,0 +1,22 @@
+server:
+  port: 6666
+spring:
+  activemq:
+    # MQ 服务器地址
+    # 61616 对应 tcp 连接
+    # 61618 对应 nio 连接
+    # 61619 对应 auto+nio 连接
+#    broker-url: tcp://localhost:61616
+#    broker-url: nio://localhost:61618
+    broker-url: auto+nio://localhost:61619
+    user: admin
+    password: admin
+  jms:
+    # false = Queue，true = Topic
+    pub-sub-domain: false
+
+# 队列名称
+myQueue: springboot-activemq-queue
+
+# 主题名称
+myTopic: springboot-activemq-topic
